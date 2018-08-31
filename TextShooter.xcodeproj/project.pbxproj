@@ -10,14 +10,14 @@
 		859567A6213966770065ADF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567A5213966760065ADF2 /* AppDelegate.m */; };
 		859567A8213966770065ADF2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 859567A7213966770065ADF2 /* GameScene.sks */; };
 		859567AA213966770065ADF2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 859567A9213966770065ADF2 /* Actions.sks */; };
-		859567AD213966770065ADF2 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567AC213966770065ADF2 /* GameScene.m */; };
+		859567AD213966770065ADF2 /* BIDLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567AC213966770065ADF2 /* BIDLevelScene.m */; };
 		859567B0213966770065ADF2 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567AF213966770065ADF2 /* GameViewController.m */; };
 		859567B3213966770065ADF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859567B1213966770065ADF2 /* Main.storyboard */; };
 		859567B52139669A0065ADF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 859567B42139669A0065ADF2 /* Assets.xcassets */; };
-		859567B82139669A0065ADF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859567B62139669A0065ADF2 /* LaunchScreen.storyboard */; };
 		859567BB2139669A0065ADF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567BA2139669A0065ADF2 /* main.m */; };
 		859567C52139669A0065ADF2 /* TextShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567C42139669A0065ADF2 /* TextShooterTests.m */; };
 		859567D02139669A0065ADF2 /* TextShooterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567CF2139669A0065ADF2 /* TextShooterUITests.m */; };
+		859567DF213978000065ADF2 /* BidPlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567DE213978000065ADF2 /* BidPlayerNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +43,12 @@
 		859567A5213966760065ADF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		859567A7213966770065ADF2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		859567A9213966770065ADF2 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		859567AB213966770065ADF2 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		859567AC213966770065ADF2 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		859567AB213966770065ADF2 /* BIDLevelScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDLevelScene.h; sourceTree = "<group>"; };
+		859567AC213966770065ADF2 /* BIDLevelScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDLevelScene.m; sourceTree = "<group>"; };
 		859567AE213966770065ADF2 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		859567AF213966770065ADF2 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		859567B2213966770065ADF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		859567B42139669A0065ADF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		859567B72139669A0065ADF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		859567B92139669A0065ADF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859567BA2139669A0065ADF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		859567C02139669A0065ADF2 /* TextShooterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextShooterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +57,9 @@
 		859567CB2139669A0065ADF2 /* TextShooterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextShooterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		859567CF2139669A0065ADF2 /* TextShooterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextShooterUITests.m; sourceTree = "<group>"; };
 		859567D12139669A0065ADF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859567DD213978000065ADF2 /* BidPlayerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BidPlayerNode.h; sourceTree = "<group>"; };
+		859567DE213978000065ADF2 /* BidPlayerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BidPlayerNode.m; sourceTree = "<group>"; };
+		859567E021397CB40065ADF2 /* BIDGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDGeometry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +114,15 @@
 				859567A5213966760065ADF2 /* AppDelegate.m */,
 				859567A7213966770065ADF2 /* GameScene.sks */,
 				859567A9213966770065ADF2 /* Actions.sks */,
-				859567AB213966770065ADF2 /* GameScene.h */,
-				859567AC213966770065ADF2 /* GameScene.m */,
+				859567AB213966770065ADF2 /* BIDLevelScene.h */,
+				859567AC213966770065ADF2 /* BIDLevelScene.m */,
+				859567DD213978000065ADF2 /* BidPlayerNode.h */,
+				859567DE213978000065ADF2 /* BidPlayerNode.m */,
+				859567E021397CB40065ADF2 /* BIDGeometry.h */,
 				859567AE213966770065ADF2 /* GameViewController.h */,
 				859567AF213966770065ADF2 /* GameViewController.m */,
 				859567B1213966770065ADF2 /* Main.storyboard */,
 				859567B42139669A0065ADF2 /* Assets.xcassets */,
-				859567B62139669A0065ADF2 /* LaunchScreen.storyboard */,
 				859567B92139669A0065ADF2 /* Info.plist */,
 				859567BA2139669A0065ADF2 /* main.m */,
 			);
@@ -249,7 +253,6 @@
 				859567B3213966770065ADF2 /* Main.storyboard in Resources */,
 				859567A8213966770065ADF2 /* GameScene.sks in Resources */,
 				859567B52139669A0065ADF2 /* Assets.xcassets in Resources */,
-				859567B82139669A0065ADF2 /* LaunchScreen.storyboard in Resources */,
 				859567AA213966770065ADF2 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				859567AD213966770065ADF2 /* GameScene.m in Sources */,
+				859567DF213978000065ADF2 /* BidPlayerNode.m in Sources */,
+				859567AD213966770065ADF2 /* BIDLevelScene.m in Sources */,
 				859567B0213966770065ADF2 /* GameViewController.m in Sources */,
 				859567BB2139669A0065ADF2 /* main.m in Sources */,
 				859567A6213966770065ADF2 /* AppDelegate.m in Sources */,
@@ -320,14 +324,6 @@
 				859567B2213966770065ADF2 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		859567B62139669A0065ADF2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				859567B72139669A0065ADF2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -1,5 +1,5 @@
 //
-//  GameScene.h
+//  BidPlayerNode.h
 //  TextShooter
 //
 //  Created by Alex Chekodanov on 31.08.2018.
@@ -8,6 +8,8 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface GameScene : SKScene
+@interface BidPlayerNode : SKNode
+
+- (CGFloat)moveToward:(CGPoint)location;
 
 @end

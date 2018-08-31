@@ -7,41 +7,45 @@
 //
 
 #import "GameViewController.h"
-#import "GameScene.h"
+#import "BIDLevelScene.h"
+
 
 @implementation GameViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-
-    // Load the SKScene from 'GameScene.sks'
-    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
     
-    // Set the scale mode to scale to fit the window
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    SKView *skView = (SKView *)self.view;
-    
-    // Present the scene
-    [skView presentScene:scene];
-    
+    // Configure the view.
+    SKView * skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
+    
+    // Create and configure the scene.
+    SKScene * scene = [BIDLevelScene sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    // Present the scene.
+    [skView presentScene:scene];
 }
 
-- (BOOL)shouldAutorotate {
+- (BOOL)shouldAutorotate
+{
     return YES;
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+/*
+- (NSUInteger)supportedInterfaceOrientations
+{
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         return UIInterfaceOrientationMaskAllButUpsideDown;
     } else {
         return UIInterfaceOrientationMaskAll;
     }
 }
-
-- (void)didReceiveMemoryWarning {
+*/
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
@@ -51,3 +55,4 @@
 }
 
 @end
+
