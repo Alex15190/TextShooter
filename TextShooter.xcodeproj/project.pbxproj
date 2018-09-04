@@ -18,6 +18,8 @@
 		859567C52139669A0065ADF2 /* TextShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567C42139669A0065ADF2 /* TextShooterTests.m */; };
 		859567D02139669A0065ADF2 /* TextShooterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567CF2139669A0065ADF2 /* TextShooterUITests.m */; };
 		859567DF213978000065ADF2 /* BidPlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567DE213978000065ADF2 /* BidPlayerNode.m */; };
+		859567E3213D7B520065ADF2 /* BIDEnemyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567E2213D7B520065ADF2 /* BIDEnemyNode.m */; };
+		859567E7213D814B0065ADF2 /* BIDBulletNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567E6213D814B0065ADF2 /* BIDBulletNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,11 @@
 		859567DD213978000065ADF2 /* BidPlayerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BidPlayerNode.h; sourceTree = "<group>"; };
 		859567DE213978000065ADF2 /* BidPlayerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BidPlayerNode.m; sourceTree = "<group>"; };
 		859567E021397CB40065ADF2 /* BIDGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDGeometry.h; sourceTree = "<group>"; };
+		859567E1213D7B510065ADF2 /* BIDEnemyNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDEnemyNode.h; sourceTree = "<group>"; };
+		859567E2213D7B520065ADF2 /* BIDEnemyNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDEnemyNode.m; sourceTree = "<group>"; };
+		859567E4213D80A20065ADF2 /* BIDPhysicsCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDPhysicsCategories.h; sourceTree = "<group>"; };
+		859567E5213D814B0065ADF2 /* BIDBulletNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDBulletNode.h; sourceTree = "<group>"; };
+		859567E6213D814B0065ADF2 /* BIDBulletNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDBulletNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +123,12 @@
 				859567A9213966770065ADF2 /* Actions.sks */,
 				859567AB213966770065ADF2 /* BIDLevelScene.h */,
 				859567AC213966770065ADF2 /* BIDLevelScene.m */,
+				859567E4213D80A20065ADF2 /* BIDPhysicsCategories.h */,
+				859567E5213D814B0065ADF2 /* BIDBulletNode.h */,
+				859567E6213D814B0065ADF2 /* BIDBulletNode.m */,
 				859567DD213978000065ADF2 /* BidPlayerNode.h */,
+				859567E1213D7B510065ADF2 /* BIDEnemyNode.h */,
+				859567E2213D7B520065ADF2 /* BIDEnemyNode.m */,
 				859567DE213978000065ADF2 /* BidPlayerNode.m */,
 				859567E021397CB40065ADF2 /* BIDGeometry.h */,
 				859567AE213966770065ADF2 /* GameViewController.h */,
@@ -280,8 +292,10 @@
 			files = (
 				859567DF213978000065ADF2 /* BidPlayerNode.m in Sources */,
 				859567AD213966770065ADF2 /* BIDLevelScene.m in Sources */,
+				859567E7213D814B0065ADF2 /* BIDBulletNode.m in Sources */,
 				859567B0213966770065ADF2 /* GameViewController.m in Sources */,
 				859567BB2139669A0065ADF2 /* main.m in Sources */,
+				859567E3213D7B520065ADF2 /* BIDEnemyNode.m in Sources */,
 				859567A6213966770065ADF2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

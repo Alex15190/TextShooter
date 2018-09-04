@@ -8,6 +8,7 @@
 
 #import "BidPlayerNode.h"
 #import "BIDGeometry.h"
+#import "BIDPhysicsCategories.h"
 
 @implementation BidPlayerNode
 
@@ -17,8 +18,20 @@
     {
         self.name = [NSString stringWithFormat:@"Player %p", self];
         [self initNodeGraph];
+        [self initPhysicsBody];
     }
     return self;
+}
+
+- (void)initPhysicsBody
+{
+    SKPhysicsBody *body = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(20, 20)];
+    body.affectedByGravity = NO;
+    body.categoryBitMask = PlayerCategory;
+    body.contactTestBitMask = EnemyCategory;
+    body.collisionBitMask = 0;
+    
+    self.physicsBody = body;
 }
 
 - (void)initNodeGraph
