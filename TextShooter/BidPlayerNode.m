@@ -67,4 +67,15 @@
     return duration;
 }
 
+-(void)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"EnemyExplosion" ofType:@"sks"];
+    SKEmitterNode *explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    explosion.numParticlesToEmit = 50;
+    explosion.position = contact.contactPoint;
+    [self.scene addChild:explosion];
+    
+    [self runAction:[SKAction playSoundFileNamed:@"playerHit.wav" waitForCompletion:NO]];
+}
+
 @end

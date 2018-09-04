@@ -58,5 +58,25 @@
     [self addChild:bottomRow];
 }
 
+- (void)friendlyBumpFrom: (SKNode *)node
+{
+    self.physicsBody.affectedByGravity = YES;
+}
+
+- (void)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact
+{
+    self.physicsBody.affectedByGravity = YES;
+    CGVector force = BIDVectorMultiply(attacker.physicsBody.velocity, contact.collisionImpulse);
+    CGPoint myContact = [self.scene convertPoint:contact.contactPoint toNode:self];
+    [self.physicsBody applyForce:force atPoint:myContact];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"MissileExplosion" ofType:@"sks"];
+    SKEmitterNode *explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    explosion.numParticlesToEmit = 20;
+    explosion.position = contact.contactPoint;
+    [self.scene addChild:explosion];
+    
+    [self runAction:[SKAction playSoundFileNamed:@"enemyHit.wav" waitForCompletion:NO]];
+}
 
 @end

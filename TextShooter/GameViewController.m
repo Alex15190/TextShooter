@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "BIDLevelScene.h"
+#import "BIDStartScene.h"
 
 
 @implementation GameViewController
@@ -22,7 +23,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [BIDLevelScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [BIDStartScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.

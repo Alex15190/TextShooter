@@ -10,11 +10,13 @@
 #import "BidPlayerNode.h"
 #import "BIDEnemyNode.h"
 #import "BIDBulletNode.h"
+#import "SKNode+Extra.h"
+#import "BIDGameOverScene.h"
 
 #define ARC4RANDOM_MAX 0x100000000
 
 
-@interface BIDLevelScene ()
+@interface BIDLevelScene () <SKPhysicsContactDelegate>
 
 @property (strong, nonatomic) BidPlayerNode *playerNode;
 @property (strong, nonatomic) SKNode *enemies;
@@ -81,9 +83,58 @@
         
         _playerBullets = [SKNode node];
         [self addChild:_playerBullets];
+        
+        self.physicsWorld.gravity = CGVectorMake(0, -1);
+        self.physicsWorld.contactDelegate = self;
     }
     return self;
 }
+
+- (void)setPlayerLives:(NSUInteger)playerLives
+{
+    _playerLives = playerLives;
+    SKLabelNode *lives = (id)[self childNodeWithName:@"LivesLabel"];
+    lives.text = [NSString stringWithFormat:@"Lives: %lu", (unsigned long)_playerLives];
+}
+
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+    if (contact.bodyA.categoryBitMask == contact.bodyB.categoryBitMask)
+    {
+        SKNode *nodeA = contact.bodyA.node;
+        SKNode *nodeB = contact.bodyB.node;
+        
+        [nodeA friendlyBumpFrom:nodeB];
+        [nodeB friendlyBumpFrom:nodeA];
+    }
+    else
+    {
+        SKNode *attacker = nil;
+        SKNode *attackee = nil;
+        
+        if (contact.bodyA.categoryBitMask > contact.bodyB.categoryBitMask)
+        {
+            // Body A is attacking Body B
+            attacker = contact.bodyA.node;
+            attackee = contact.bodyB.node;
+        }
+        else
+        {
+            // Body B is attacking Body A
+            attacker = contact.bodyB.node;
+            attackee = contact.bodyA.node;
+        }
+        if ([attackee isKindOfClass:[BidPlayerNode class]])
+            self.playerLives--;
+        if (attacker)
+        {
+            [attackee receiveAttacker:attacker contact:contact];
+            [self.playerBullets removeChildrenInArray:@[attacker]];
+            [self.enemies removeChildrenInArray:@[attacker]];
+        }
+    }
+}
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
@@ -123,7 +174,8 @@
     
     [self updateBullets];
     [self updateEnemies];
-    [self checkForNextLevel];
+    if (![self checkForGameOver])
+        [self checkForNextLevel];
 }
 
 - (void)checkForNextLevel
@@ -175,6 +227,34 @@
         [bullet applyRecurringForce];
     }
     [self.playerBullets removeChildrenInArray:bulletsToRemove];
+}
+
+- (BOOL)checkForGameOver
+{
+    if (self.playerLives == 0)
+    {
+        [self triggerGameOver];
+        return YES;
+    }
+    return NO;
+}
+
+-(void)triggerGameOver
+{
+    self.finished = YES;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"EnemyExplosion" ofType:@"sks"];
+    SKEmitterNode *explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+    explosion.numParticlesToEmit = 200;
+    explosion.position = _playerNode.position;
+    [self addChild:explosion];
+    [_playerNode removeFromParent];
+    
+    SKTransition *transition = [SKTransition doorsOpenVerticalWithDuration:1.0];
+    SKScene *gameOver = [[BIDGameOverScene alloc] initWithSize:self.frame.size];
+    [self.view presentScene:gameOver transition:transition];
+    
+    [self runAction:[SKAction playSoundFileNamed:@"gameOver.wav" waitForCompletion:NO]];
 }
 
 @end

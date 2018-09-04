@@ -20,6 +20,16 @@
 		859567DF213978000065ADF2 /* BidPlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567DE213978000065ADF2 /* BidPlayerNode.m */; };
 		859567E3213D7B520065ADF2 /* BIDEnemyNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567E2213D7B520065ADF2 /* BIDEnemyNode.m */; };
 		859567E7213D814B0065ADF2 /* BIDBulletNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 859567E6213D814B0065ADF2 /* BIDBulletNode.m */; };
+		85F52731213E9E390045262B /* SKNode+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F52730213E9E390045262B /* SKNode+Extra.m */; };
+		85F52733213EA50C0045262B /* MissileExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 85F52732213EA50C0045262B /* MissileExplosion.sks */; };
+		85F52735213EA7490045262B /* EnemyExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 85F52734213EA7490045262B /* EnemyExplosion.sks */; };
+		85F52738213EAA640045262B /* BIDGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F52737213EAA640045262B /* BIDGameOverScene.m */; };
+		85F5273B213EB1450045262B /* BIDStartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F5273A213EB1450045262B /* BIDStartScene.m */; };
+		85F52741213EB8870045262B /* enemyHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 85F5273C213EB8850045262B /* enemyHit.wav */; };
+		85F52742213EB8870045262B /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 85F5273D213EB8860045262B /* gameStart.wav */; };
+		85F52743213EB8870045262B /* playerHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 85F5273E213EB8860045262B /* playerHit.wav */; };
+		85F52744213EB8870045262B /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 85F5273F213EB8860045262B /* shoot.wav */; };
+		85F52745213EB8870045262B /* gameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = 85F52740213EB8870045262B /* gameOver.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +77,19 @@
 		859567E4213D80A20065ADF2 /* BIDPhysicsCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDPhysicsCategories.h; sourceTree = "<group>"; };
 		859567E5213D814B0065ADF2 /* BIDBulletNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDBulletNode.h; sourceTree = "<group>"; };
 		859567E6213D814B0065ADF2 /* BIDBulletNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDBulletNode.m; sourceTree = "<group>"; };
+		85F5272F213E9E390045262B /* SKNode+Extra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKNode+Extra.h"; sourceTree = "<group>"; };
+		85F52730213E9E390045262B /* SKNode+Extra.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKNode+Extra.m"; sourceTree = "<group>"; };
+		85F52732213EA50C0045262B /* MissileExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MissileExplosion.sks; sourceTree = "<group>"; };
+		85F52734213EA7490045262B /* EnemyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EnemyExplosion.sks; sourceTree = "<group>"; };
+		85F52736213EAA630045262B /* BIDGameOverScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDGameOverScene.h; sourceTree = "<group>"; };
+		85F52737213EAA640045262B /* BIDGameOverScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDGameOverScene.m; sourceTree = "<group>"; };
+		85F52739213EB1450045262B /* BIDStartScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDStartScene.h; sourceTree = "<group>"; };
+		85F5273A213EB1450045262B /* BIDStartScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDStartScene.m; sourceTree = "<group>"; };
+		85F5273C213EB8850045262B /* enemyHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = enemyHit.wav; sourceTree = "<group>"; };
+		85F5273D213EB8860045262B /* gameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
+		85F5273E213EB8860045262B /* playerHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerHit.wav; sourceTree = "<group>"; };
+		85F5273F213EB8860045262B /* shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shoot.wav; sourceTree = "<group>"; };
+		85F52740213EB8870045262B /* gameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,16 +146,29 @@
 				859567A9213966770065ADF2 /* Actions.sks */,
 				859567AB213966770065ADF2 /* BIDLevelScene.h */,
 				859567AC213966770065ADF2 /* BIDLevelScene.m */,
+				85F52739213EB1450045262B /* BIDStartScene.h */,
+				85F5273A213EB1450045262B /* BIDStartScene.m */,
+				85F52732213EA50C0045262B /* MissileExplosion.sks */,
+				85F52734213EA7490045262B /* EnemyExplosion.sks */,
+				85F5272F213E9E390045262B /* SKNode+Extra.h */,
+				85F52730213E9E390045262B /* SKNode+Extra.m */,
 				859567E4213D80A20065ADF2 /* BIDPhysicsCategories.h */,
 				859567E5213D814B0065ADF2 /* BIDBulletNode.h */,
 				859567E6213D814B0065ADF2 /* BIDBulletNode.m */,
-				859567DD213978000065ADF2 /* BidPlayerNode.h */,
 				859567E1213D7B510065ADF2 /* BIDEnemyNode.h */,
 				859567E2213D7B520065ADF2 /* BIDEnemyNode.m */,
+				859567DD213978000065ADF2 /* BidPlayerNode.h */,
 				859567DE213978000065ADF2 /* BidPlayerNode.m */,
+				85F52736213EAA630045262B /* BIDGameOverScene.h */,
+				85F52737213EAA640045262B /* BIDGameOverScene.m */,
 				859567E021397CB40065ADF2 /* BIDGeometry.h */,
 				859567AE213966770065ADF2 /* GameViewController.h */,
 				859567AF213966770065ADF2 /* GameViewController.m */,
+				85F5273C213EB8850045262B /* enemyHit.wav */,
+				85F52740213EB8870045262B /* gameOver.wav */,
+				85F5273D213EB8860045262B /* gameStart.wav */,
+				85F5273E213EB8860045262B /* playerHit.wav */,
+				85F5273F213EB8860045262B /* shoot.wav */,
 				859567B1213966770065ADF2 /* Main.storyboard */,
 				859567B42139669A0065ADF2 /* Assets.xcassets */,
 				859567B92139669A0065ADF2 /* Info.plist */,
@@ -262,9 +298,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F52745213EB8870045262B /* gameOver.wav in Resources */,
 				859567B3213966770065ADF2 /* Main.storyboard in Resources */,
+				85F52743213EB8870045262B /* playerHit.wav in Resources */,
+				85F52742213EB8870045262B /* gameStart.wav in Resources */,
+				85F52733213EA50C0045262B /* MissileExplosion.sks in Resources */,
 				859567A8213966770065ADF2 /* GameScene.sks in Resources */,
+				85F52741213EB8870045262B /* enemyHit.wav in Resources */,
 				859567B52139669A0065ADF2 /* Assets.xcassets in Resources */,
+				85F52735213EA7490045262B /* EnemyExplosion.sks in Resources */,
+				85F52744213EB8870045262B /* shoot.wav in Resources */,
 				859567AA213966770065ADF2 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,10 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F52738213EAA640045262B /* BIDGameOverScene.m in Sources */,
 				859567DF213978000065ADF2 /* BidPlayerNode.m in Sources */,
 				859567AD213966770065ADF2 /* BIDLevelScene.m in Sources */,
+				85F5273B213EB1450045262B /* BIDStartScene.m in Sources */,
 				859567E7213D814B0065ADF2 /* BIDBulletNode.m in Sources */,
 				859567B0213966770065ADF2 /* GameViewController.m in Sources */,
+				85F52731213E9E390045262B /* SKNode+Extra.m in Sources */,
 				859567BB2139669A0065ADF2 /* main.m in Sources */,
 				859567E3213D7B520065ADF2 /* BIDEnemyNode.m in Sources */,
 				859567A6213966770065ADF2 /* AppDelegate.m in Sources */,

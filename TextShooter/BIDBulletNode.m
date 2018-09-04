@@ -56,6 +56,8 @@
     CGFloat thrustMagnitude = 100.0;
     bullet.thrust = BIDVectorMultiply(scaledMovement, thrustMagnitude);
     
+    [bullet runAction:[SKAction playSoundFileNamed:@"shoot.wav" waitForCompletion:NO]];
+    
     return bullet;
 }
 
